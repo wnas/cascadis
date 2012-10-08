@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Gemeente Juinen - aanvraag paspoort</title>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" /> -->
+	
+	<link rel="stylesheet" href="cascadis.css" type="text/css" media="screen">
+</head>
+<body>
+	<header>
+		<a href="index.html"><h1>Juinen</h1></a>
+	</header>
+	<nav>
+		<!-- top taken -->
+		<ul>
+			<li><a href="#">Afval</a></li>
+			<li><a href="#">Paspoort, Rijbewijs, Uittreksels</a></li>
+			<li><a href="#">(ver)Bouwen</a></li>
+			<li><a href="#">Geboorte</a></li>
+			<li><a href="#">Huwelijk</a></li>
+			<li><a href="#">Overlijden</a></li>
+			<li><a href="#">Werk en uitkering</a></li>
+			<li><a href="#">Parkeren, verkeer en vervoer</a></li>
+		</ul>
+	</nav>
+	<section>
+		<article id="paspoort">
+			<h1>Aanvragen Paspoort</h1>
+			<p class="info"><a href="#paspoort-aanvraag">U kunt ook direct uw paspoort aanvragen</a></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article id="paspoort-aanvraag" class="aanvraag">
+			<form action="#">
+				<h1>Zoek</h1>
+				<p class="info">Niet alle velden zijn verplicht, wij vragen u om uw emailadres of telefoonnummer in te vullen, zodat wij u kunnen bereiken als de afspraak niet door kan gaan.</p>
+				<p>
+					<label for=naam>Naam</label>
+					<input id="naam" placeholder="uw naam" required>
+				</p>
+				<p>
+					<label for=email>Email adress</label>
+					<input id="email" type="email" placeholder="naam@juinen.nl">
+				</p>
+				<p>
+					<label for=tel>Telefoonnummer</label>
+					<input id="tel" type="tel" placeholder="012-3456789">
+				</p>
+				<p>
+					<label for=onderwerp>Aanvraag / aangifte</label>
+					<select id="onderwerp">
+						<option value="a">Rijbewijs</option>
+						<option value="b" selected>Paspoort</option>
+						<option value="c">Verhuizing</option>
+						<option value="d">Geboorte</option>
+						<option value="e">Uittreksel</option>
+					</select>
+				</p>
+				<p>
+					<label class="datetime" for="date">Dag</label>
+					<input type="date" value="25-09-2012" id="date" >
+				</p>
+				<p>
+					<label class="datetime" for="time">Tijd</label>
+					<input type="time" placeholder="tijd" id="time" >
+				</p>
+
+				<button>Vraag aan</button>
+			</form>
+		</article>
+		
+		<footer>copyright gemeente Juinen 2012</footer>
+	</section>
+	
+</body>
+</html>

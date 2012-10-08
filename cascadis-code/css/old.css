@@ -1,0 +1,300 @@
+body {
+	background-color:white;
+	font-family:helvetica, sans-serif;
+}
+body, p, div, article, section, h1, ul, li {
+	padding:0;
+	margin:0;
+}
+header {
+	z-index: 10;
+}
+ul, li {
+	list-style:none;
+}
+a,
+a:hover p {
+	text-decoration: none;
+	color:#333;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.3em;
+}
+p {
+	margin-bottom: .5em;
+}
+p.info {
+	border:1px solid #ccc;
+	padding: .5em;
+	font-style: italic;
+	color:#999;
+}
+p.info:hover {
+	background-color: #ffc;
+}
+input[required]{
+	border-color:#000;
+}
+
+nav li {
+	display: block;
+	background-color: #fff;
+	border:1px solid #ccc;
+	padding: .5em;
+	margin: .2em 0;
+}
+nav li:hover {
+	background-color:rgba(0,0,0,.1);
+	border-color:#000;
+}
+
+article {
+	background-color: #fff;
+	padding: .5em;
+	border-bottom: 1px solid #ccc;
+}
+article h1 {
+	border-bottom: 1px solid #ccc;
+	
+	margin: .5em -.5em;
+	padding: 0 .5em .5em;
+}
+article img {
+	width: 100%;
+}
+article li {
+	list-style:disc;
+	
+}
+article ul {
+	padding-left:1em;
+}
+footer {
+	width: 100%;
+	padding: 1em .5em;
+}
+.home footer {
+	float: left;
+}
+
+/* search */
+.home form {
+	width: auto;
+	background-color:rgba(0,0,0,.1);
+	padding: 1em;
+}
+input[type="search"]{
+  -webkit-appearance:textfield;
+  width: 100%;
+}
+
+/* aanvraag */
+.aanvraag label:not(.datetime) {
+		position: absolute;
+		display:inline-block;
+		left:-999em;
+		width: 30%;
+	}
+	.aanvraag input,
+	.aanvraag select {
+		width: 90%;
+	}
+	.aanvraag input[type="date"],
+	.aanvraag input[type="time"]{
+		width: 60%;
+	}
+
+
+/* clearfix gaste */
+
+.clearfix:before,
+.clearfix:after,
+article:before,
+article:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after,
+article:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix,
+article {
+    *zoom: 1;
+}
+
+
+/*
+	iphone 3 portrait
+*/
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+	header {
+		background-color:green;
+
+	}
+	 
+}
+
+/*
+	iphone 3 liggend
+*/
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+
+	header {
+		background-color:red;
+	}
+	nav {
+		float: left; width: 18.6em;
+	}
+	section {
+		position: absolute;
+		right:0;
+		padding-left: 20em;
+	}
+	article img {
+		width: auto;
+	}
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
+
+
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) and (orientation : portrait) {
+	header {
+		background-color:blue;
+	}
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) and (orientation : landscape) {
+	header {
+		background-color:gray;
+	}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+	nav {
+		float: left; width: 18.6em;
+	}
+	section {
+		position: static;
+		padding-left: 20em;
+	}
+	article img {
+		width: auto;
+	}
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/*
+	nexus 7
+*/
+@media only screen and (device-width:1280px) and (orientation:landscape) {
+/*style --code removed for sack of space */
+	header {
+		background-color:orange;
+	}
+} 
+
+@media only screen and (device-width:800px) and (orientation:portrait) {
+
+/*style --code removed for sack of space */
+	header {
+		background-color:pink;
+	}
+}
+/* desktop */
+@media only screen and (min-device-width:800px){
+	nav {
+		width: 18.6em;
+		float:left;
+	}
+	.home input[type="search"],
+	.home button{
+	  -webkit-appearance:textfield;
+	  width: 20em;
+	  font-size: 2em;
+	}
+	/* copy for landscape mode...*/
+	section {
+		position: absolute;
+		right:0;
+		z-index:-1;
+		padding-left: 20em;
+	}
+	.home article {
+		float:left;
+		width: 45%;
+	}
+	.home article:nth-child(2n){
+		margin-right:.5em;
+		clear:left;
+	}
+	.aanvraag label {
+		position: static;
+		display: inline-block;
+		width: 12em;
+	}
+	.aanvraag input,
+	.aanvraag select {
+		width: 12em;
+	}
+	article img {
+		width: auto;
+		float:left;
+		margin-right:.5em;
+	}
+	article:nth-child(even) img {
+		float:right;
+		margin-right: 0;
+		margin-left: .5em;
+	}
+}
+
+@media only screen and (width:720px){
+
+	body {
+		
+
+	}
+	nav {
+		width: 100%;
+		float:none;
+	}
+	section {
+		padding-left:0;
+	}
+}
+#crisis {
+	width: 90%;
+	padding: 5%;
+	font-size: 1.2em;
+}
